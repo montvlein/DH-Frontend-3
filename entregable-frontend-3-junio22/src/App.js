@@ -10,14 +10,14 @@ import Cabecera from './components/Cabecera'
 import Listado from "./components/Listado"
 
 export default function App() {
-  let [cant, setCantidad] = useState(0)
+  let [comprados, setCantidad] = useState(0)
   function aumentarCantidadEn1() {
-    setCantidad(cant++)
+    setCantidad(comprados++)
   }
 
   return (
     <div className="App">
-      <Cabecera cantidad={cant}/>
+      <Cabecera cantidad={comprados}/>
       <Listado props={ aumentarCantidadEn1 }/>
     </div>
   );
