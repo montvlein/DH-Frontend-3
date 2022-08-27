@@ -43,7 +43,7 @@ function ConStock({ stock, comprar }) {
 function SinStock() {
   return (
     <>
-      <h5>En stock: <span>agotado</span></h5>
+      <h5>En stock: <span className="agotado">agotado</span></h5>
       <button disabled >SIN STOCK</button>
     </>
   )

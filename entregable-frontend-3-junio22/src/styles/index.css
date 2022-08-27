@@ -53,12 +53,16 @@ header p span {
 }
 
 .producto h5 span{
-  background-color: rgb(255, 178, 178);
   padding: 3px;
-  font-weight: lighter;
-  color: rgb(155, 0, 0);
-  border-radius: 3px;
 }
+
+.producto h5 span.agotado {
+  background-color: rgb(255, 178, 178);
+  border-radius: 3px;
+  color: rgb(155, 0, 0);
+  font-weight: lighter;
+}
+
 .producto button{
   padding: 5px;
   text-transform: uppercase;
