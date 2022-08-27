@@ -13,7 +13,10 @@ export default function Item() {
 
   return (
     <div className='producto'>
-      {/* maquetar Item aquí */}
+      <h3>titulo</h3>
+      <p>descripcion</p>
+      <h5>En stock: <span>0</span></h5>
+      <button>COMPRAR</button>
     </div>
   )
 }
