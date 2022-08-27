@@ -10,7 +10,10 @@ import Cabecera from './components/Cabecera'
 import Listado from "./components/Listado"
 
 export default function App() {
-  const [cant, setCantidad] = useState(0)
+  let [cant, setCantidad] = useState(0)
+  function aumentarCantidadEn1() {
+    setCantidad(cant++)
+  }
 
   return (
     <div className="App">
