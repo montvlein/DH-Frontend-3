@@ -12,10 +12,10 @@ En cada uno de los componentes está detallado el funcionamiento que debe cumpli
 
 ## Instalación y ejecución
 
-Se requiere `node v14` o posterior.
+Se requiere `node`.
 
 ```bash
 $ cd entregable-frontend-3-junio22
 $ npm install
-$ npm run start
+$ npm start
 ```
