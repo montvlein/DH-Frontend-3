@@ -14,9 +14,9 @@ import { useState } from "react"
 export default function Item({producto, stock, aumentarCantidadEnCabecera}) {
   let [stockActual, setStock] = useState(stock)
 
-  function comprar() {
-      setStock(stockActual--)
-      aumentarCantidadEnCabecera()
+  function handlerStock() {
+    setStock(stockActual -1)
+    aumentarCantidadEnCabecera()
   }
 
   return (
@@ -24,7 +24,7 @@ export default function Item({producto, stock, aumentarCantidadEnCabecera}) {
       <h3>{ producto.nombre }</h3>
       <p>{ producto.descripcion }</p>
       { stockActual>0 ? 
-      <ConStock stock={ stockActual } comprar={ comprar }/>:
+      <ConStock stock={ stockActual } comprar={ handlerStock }/>:
       <SinStock/>
       }
     </div>

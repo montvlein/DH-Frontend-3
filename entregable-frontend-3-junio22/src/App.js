@@ -12,7 +12,7 @@ import Listado from "./components/Listado"
 export default function App() {
   let [comprados, setCantidad] = useState(0)
   function aumentarCantidadEn1() {
-    setCantidad(comprados++)
+    setCantidad(comprados +1)
   }
 
   return (
