@@ -7,7 +7,7 @@
 // PROPS: Listado recibe el método para aumentar el estado de App y se lo pasa a cada uno de sus hijos.
 
 import React from 'react'
-import data from './data.json'
+import data from '../data/data.json'
 import Item from './Item'
 
 export default function Listado({ props }) {
