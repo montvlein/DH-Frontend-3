@@ -18,7 +18,7 @@ export default function App() {
   return (
     <div className="App">
       <Cabecera cantidad={cant}/>
-      <Listado />
+      <Listado props={ aumentarCantidadEn1 }/>
     </div>
   );
 }
