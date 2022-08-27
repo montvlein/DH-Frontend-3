@@ -5,7 +5,10 @@
 // MÉTODOS: App debe tener un método para aumentar este número y que pueda ser ejecutado por su nieto Item.
 // PROPS: App deberá pasar por props lo necesario a sus componenetes internos.
 
-function App() {
+import Cabecera from './components/Cabecera'
+import Listado from "./components/Listado"
+
+export default function App() {
 
   return (
     <div className="App">
@@ -14,5 +17,3 @@ function App() {
     </div>
   );
 }
-
-export default App;
