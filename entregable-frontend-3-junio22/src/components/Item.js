@@ -11,15 +11,40 @@
 
 import { useState } from "react"
 
-export default function Item({producto, stock}) {
+export default function Item({producto, stock, aumentarCantidadEnCabecera}) {
   let [stockActual, setStock] = useState(stock)
+
+  function comprar() {
+      setStock(stockActual--)
+      aumentarCantidadEnCabecera()
+  }
 
   return (
     <div className='producto'>
       <h3>{ producto.nombre }</h3>
       <p>{ producto.descripcion }</p>
-      <h5>En stock: <span>{ stockActual }</span></h5>
-      <button>COMPRAR</button>
+      { stockActual>0 ? 
+      <ConStock stock={ stockActual } comprar={ comprar }/>:
+      <SinStock/>
+      }
     </div>
+  )
+}
+
+function ConStock({ stock, comprar }) {
+  return (
+    <>
+      <h5>En stock: <span>{ stock }</span></h5>
+      <button onClick={comprar}>COMPRAR</button>
+    </>
+  )
+}
+
+function SinStock() {
+  return (
+    <>
+      <h5>En stock: <span>agotado</span></h5>
+      <button disabled >SIN STOCK</button>
+    </>
   )
 }
