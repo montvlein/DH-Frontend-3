@@ -23,28 +23,8 @@ export default function Item({producto, stock, aumentarCantidadEnCabecera}) {
     <div className='producto'>
       <h3>{ producto.nombre }</h3>
       <p>{ producto.descripcion }</p>
-      { stockActual>0 ? 
-      <ConStock stock={ stockActual } comprar={ handlerStock }/>:
-      <SinStock/>
-      }
+      <h5>En stock: <span className={stockActual>0 ? stockActual : "agotado"}>{ stockActual>0 ? stockActual : "agotado" }</span></h5>
+      <button onClick={handlerStock} disabled={ stockActual>0 ? false : true } >{ stockActual>0 ? "COMPRAR" : "SIN STOCK" }</button>
     </div>
-  )
-}
-
-function ConStock({ stock, comprar }) {
-  return (
-    <>
-      <h5>En stock: <span>{ stock }</span></h5>
-      <button onClick={comprar}>COMPRAR</button>
-    </>
-  )
-}
-
-function SinStock() {
-  return (
-    <>
-      <h5>En stock: <span className="agotado">agotado</span></h5>
-      <button disabled >SIN STOCK</button>
-    </>
   )
 }
