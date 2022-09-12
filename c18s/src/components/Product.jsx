@@ -1,12 +1,15 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState, useEffect, useContext } from 'react'
 import "../styles/Product.css"
 import items from "../items.json"
-import { useParams } from 'react-router-dom'
+import { Link, useParams } from 'react-router-dom'
+import Context from '../Context/CartContext'
 
 export default function Product() {
     const [product, setProduct] = useState({})
     const [loading, setLoading] = useState(true)
     const params = useParams()
+    const { agregarAlCarrito } = useContext(Context)
+
     useEffect(()=>{
         componentDidMount()
     }, [])
@@ -33,12 +36,18 @@ export default function Product() {
     if (!product.length) return <p>Product not Found</p>
 
     return (
+        <>
+        <Link to={"/"}>Volver</Link>
         <div className="product__container">
             <p id="home__title">{product[0]?.name}</p>
             <img id="product__image" src={`/images/${product[0].id}.png`} alt={product[0].name} />
             <p>${product[0].price}</p>
             <p id="product__desc">{product[0].description}</p>
+            <button onClick={(event) => {
+                agregarAlCarrito(product[0]?.name)
+                } }>Agregar al carrito</button>
         </div>
+        </>
     )
 }
 
