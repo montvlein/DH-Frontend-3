@@ -1,0 +1,11 @@
+@import url(Carrito.css);
+
+header {
+    align-items: center;
+    background-color: var(--oscuro);
+    color: white;
+    display: flex;
+    justify-content: space-evenly;
+    height: 150px;
+    padding: 20px;
+  }
