@@ -1,6 +1,6 @@
 import React from "react";
 
-export default function ProductList(params) {
+export default function ProductList() {
     return(
         <ul>
             <li>map por cada producto</li>
