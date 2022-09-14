@@ -1,5 +1,5 @@
 .info p {
-    text-align: start;
+    text-align: justify;
     margin: .5rem 0;
 }
 
@@ -8,6 +8,14 @@
     margin: .5rem;
 }
 
-.info details ul {
+.info ul {
     list-style: none;
+}
+
+.info .consigna li{
+    display: table-cell;
+}
+
+.info p span {
+    font-weight: 900;
 }

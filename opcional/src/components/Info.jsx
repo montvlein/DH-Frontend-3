@@ -24,26 +24,26 @@ export default function Info() {
         desde 0 utilizando create-react-app, un sitio que cuente con 4 “páginas”
         (simuladas con react router).
       </p>
-        <ul>
+        <ul className="consigna">
           <li>
-            Info → Esta contendrá un texto introductorio y será el index del
+            <h5>Info</h5> Esta contendrá un texto introductorio y será el index del
             sitio.
           </li>
           <li>
-            Productos→ Permitirá a través de un input, la búsqueda de cualquier
+            <h5>Productos</h5> Permitirá a través de un input, la búsqueda de cualquier
             producto que el usuario escriba. Esto devolverá un detalle de
             producto con un stock
           </li>
           <li>
-            Producto Detalle→ Mostrará el detalle de un producto. Para ello
+            <h5>Producto Detalle</h5> Mostrará el detalle de un producto. Para ello
             habrá que implementar una ruta segmentada. La obtención de la
             información del producto queda sujeto a como deseen implementarlo,
             ya sea enviando el detalle del producto desde un navigate como
             empleando la recuperación del mismo desde la API
           </li>
         </ul>
-      <h4>Importante</h4>
       <p>
+        <span>Importante</span>:
         El objetivo de esta actividad es exclusivamente la práctica y repaso de
         contenidos. Este documento constituye solo una guía que pretende abarcar
         todos los contenidos vistos. No implica que deban realizarlo en su
