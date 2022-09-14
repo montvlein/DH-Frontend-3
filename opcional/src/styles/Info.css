@@ -1,0 +1,13 @@
+.info p {
+    text-align: start;
+    margin: .5rem 0;
+}
+
+.info details {
+    cursor: pointer;
+    margin: .5rem;
+}
+
+.info details ul {
+    list-style: none;
+}
