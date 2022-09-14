@@ -1,5 +1,6 @@
 @import url(Colores.css);
 @import url(Header.css);
+@import url(Nav.css);
 @import url(Footer.css);
 
 * {
@@ -7,6 +8,10 @@
   padding: 0;
   text-decoration: none;
   box-sizing: border-box;
+}
+
+a {
+  color: #000;
 }
 
 .text-center {
