@@ -26,3 +26,24 @@ a {
   margin: 0 auto;
 }
 
+.productList {
+  display: flex; /* hacer con grid */
+  flex-wrap: wrap;
+  list-style-type: none;
+  gap: 1rem;
+  align-items: center;
+  justify-content: space-between;
+  margin: 1rem;
+}
+
+.productList li {
+  padding: 2rem;
+  width: 20%;
+}
+
+.card{
+  border-radius: 50px;
+  background: #e0e0e0;
+  box-shadow:  20px 20px 60px #bebebe,
+             -20px -20px 60px #ffffff;
+}
