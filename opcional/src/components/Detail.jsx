@@ -1,12 +1,13 @@
 import React from "react";
-import { Link } from "react-router-dom";
-import Product from "./Product";
+import { Link, useParams } from "react-router-dom";
+
 
 export default function Detail() {
+    const { idCategoria } = useParams()
     return(
         <>
-        <Link to="/product">Volver</Link>
-        <Product/>
+        <Link to={`/categorias/${idCategoria}/productos`}>Volver</Link>
+        <p>Texto</p>
         </>
     )
 }

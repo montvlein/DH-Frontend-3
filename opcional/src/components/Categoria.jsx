@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { getCategoriDetail } from '../data/MELI_API'
+import { Link } from "react-router-dom";
 
 export default function CategoriaDetail({ name, id }) {
     const [category, setCat] = useState({id, name})
@@ -21,19 +22,23 @@ export default function CategoriaDetail({ name, id }) {
     if (loading) {
         return(
         <li className="card">
-            <h4>{name}</h4>
+            <Link to={`${id}/productos`}>
+                <h4>{name}</h4>
+            </Link>
         </li>
         )
     }
 
     return(
         <li className="card">
-            <figure>
-                <img src={category.picture} alt="💔" />
-                <figcaption>
-                    <h3>{category.name}</h3>
-                </figcaption>
-            </figure>
+            <Link to={`${id}/productos`}>
+                <figure>
+                    <img src={category.picture} alt="💔" />
+                    <figcaption>
+                        <h3>{category.name}</h3>
+                    </figcaption>
+                </figure>
+            </Link>
         </li>
     )
 }

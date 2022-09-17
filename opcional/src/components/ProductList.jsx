@@ -1,15 +1,17 @@
 import React, { useEffect,useState } from "react";
-import { getCategories } from "../data/MELI_API";
-import CategoriaDetail from "./Categoria";
+import { useParams, Link } from "react-router-dom";
+import { getProductsCategories } from "../data/MELI_API";
+import Product from "./Product";
 
 export default function ProductList() {
-    const [cat, setCat] = useState([])
+    const { idCategoria } = useParams()
+    const [products, setProducts] = useState([])
     const [loading, setLoad] = useState(true)
 
     useEffect( () => {
-        getCategories()
-        .then( categories => {
-            setCat(categories)
+        getProductsCategories(idCategoria)
+        .then( productList => {
+            setProducts(productList)
             setLoad(false)
         })
     }, [])
@@ -27,9 +29,12 @@ export default function ProductList() {
 
     return(
         <>
-        <ul className="productList">
-            { cat.map( c => <CategoriaDetail key={c.id} {...c} /> )}
-        </ul>
+        <Link to={"/categorias"}>Volver</Link>
+        <section>
+            <ul className="productList">
+                { products.map( p => <Product key={p.id} {...p} /> )}
+            </ul>
+        </section>
         </>
     )
 }
