@@ -31,9 +31,7 @@ export default function ProductList() {
         <>
         <Link to={"/categorias"}>Volver</Link>
         <section>
-            <ul className="productList">
-                { products.map( p => <Product key={p.id} {...p} /> )}
-            </ul>
+            { products.map( p => <Product key={p.id} {...p} /> )}
         </section>
         </>
     )
