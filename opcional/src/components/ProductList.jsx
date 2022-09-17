@@ -1,6 +1,6 @@
 import React, { useEffect,useState } from "react";
 import { useParams, Link } from "react-router-dom";
-import { getProductsCategories } from "../data/MELI_API";
+import { getProductsByCategories } from "../data/MELI_API";
 import Product from "./Product";
 
 export default function ProductList() {
@@ -9,7 +9,7 @@ export default function ProductList() {
     const [loading, setLoad] = useState(true)
 
     useEffect( () => {
-        getProductsCategories(idCategoria)
+        getProductsByCategories(idCategoria)
         .then( productList => {
             setProducts(productList)
             setLoad(false)

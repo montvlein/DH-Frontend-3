@@ -12,7 +12,7 @@ export function getCategoriDetail(id) {
     .then(data => data)
 }
 
-export function getProductsCategories(idCategoria) {
+export function getProductsByCategories(idCategoria) {
     return fetch(baseURI+"sites/MLA/search?category="+idCategoria)
     .then(res => res.json())
     .then(data => data.results)
