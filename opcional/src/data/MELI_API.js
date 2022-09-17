@@ -17,3 +17,9 @@ export function getProductsByCategories(idCategoria) {
     .then(res => res.json())
     .then(data => data.results)
 }
+
+export function queryProduct(name) {
+    return fetch(baseURI+"sites/MLA/search?q="+name)
+    .then(res => res.json())
+    .then(data => data.results)
+}
