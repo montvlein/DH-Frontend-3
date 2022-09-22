@@ -23,3 +23,9 @@ export function queryProduct(name) {
     .then(res => res.json())
     .then(data => data.results)
 }
+
+export function getProductById(id) {
+    return fetch(baseURI+"items/"+id)
+    .then(res => res.json())
+    .then(data => data)
+}

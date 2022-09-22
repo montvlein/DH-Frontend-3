@@ -10,12 +10,15 @@ import CategoriaList from './components/CategoriaList';
 import ProductList from './components/ProductList';
 import Detail from './components/Detail';
 import './styles/App.css';
+import { AppContext } from './Context/AppContext';
 
 ReactDOM.render(
   <React.StrictMode>
-    <BrowserRouter>
-      <App />
-    </BrowserRouter>
+    <AppContext>
+      <BrowserRouter>
+        <App />
+      </BrowserRouter>
+    </AppContext>
   </React.StrictMode>
   , document.getElementById('root')
 );

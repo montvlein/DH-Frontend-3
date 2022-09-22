@@ -1,11 +1,11 @@
 import React from "react";
-import Carrito from "./Carrito";
+import Fav from "./Favoritos";
 
 export default function Header() {
     return (
     <header className="App-header">
         <h2>Welcome</h2>
-        <Carrito/>
+        <Fav/>
     </header>
     )
 }
